@@ -3,6 +3,7 @@ import Header from "./header/Header";
 import Navbar from "./navbar/Navbar";
 import SubHeading from "./subHeading/SubHeading";
 import MenuItem from "./menuItem/MenuItem";
+import Slider from "./homeSlider/Slider";
 
 export {
     Footer,
@@ -10,4 +11,5 @@ export {
     MenuItem,
     Navbar,
     SubHeading,
+    Slider,
 };

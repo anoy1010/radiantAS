@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { logo, logo1, logo2 } from '../../constants/images';
 import './Navbar.css';
 import {FiSearch} from 'react-icons/fi'
+import Slider from '../homeSlider/Slider';
 
 const Navbar = () => {
 
@@ -9,8 +10,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className='px-14 py-0 my-0'>
-      <div className='flex justify-between items-center'>
+    <nav className='navback'>
+      <div className='px-14 py-0 my-0 flex justify-between items-center'>
         <div className='flex  w-[500px] h-[100px] justify-between items-center gap-8  '>
           <img className='w-[100px]' src={logo1} alt="Radiant" />
           <div className='flex justify-center items-center'>

@@ -1,10 +1,14 @@
 import React from 'react'
 import './footer.css';
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div>footer</div>
+    <section className='w-screen h-screen'>
+      <div className='bg-black w-[] h-[100%]'>
+
+      </div>
+    </section>
   )
 }
 
-export default footer
+export default Footer

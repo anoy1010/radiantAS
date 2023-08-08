@@ -1,3 +1,13 @@
 .parallax-bg {
     background-image: url("../../assets/images/cam4.jpg");
 }
+.image {
+    overflow: hidden;
+}
+img{
+    transition: 10s;
+}
+img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}

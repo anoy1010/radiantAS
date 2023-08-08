@@ -4,10 +4,10 @@
 .image {
     overflow: hidden;
 }
-img{
+.image img{
     transition: 10s;
 }
-img:hover {
+.image img:hover {
     transform: scale(1.5);
     cursor: pointer;
 }

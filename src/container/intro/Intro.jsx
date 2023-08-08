@@ -3,7 +3,9 @@ import './Intro.css'
 
 const Intro = () => {
   return (
-    <div>intro</div>
+    <section>
+      <div className='w-screen h-screen'></div>
+    </section>
   )
 }
 

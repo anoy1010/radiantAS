@@ -58,17 +58,17 @@ function ServP({sousTitre1, titre1, titre2, image1,image2,image3, imageTitle1, i
                     <h2 className='text-5xl w-[700px] text-center   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 </div>
                 <div className='grid grid-cols-3 px-32 place-items-center gap-8 h-[300px]'>
-                    <div className=' bg-cover bg-center flex flex-col justify-end items-center'  style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                    <div className=' bg-cover bg-center flex flex-col justify-end items-center' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
                         <div className='mb-8'>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>
                         </div>
-                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center'style={{backgroundImage:`url(${image2})`, width: '100%', height: '100%'}}>
                         <div className='mb-8'>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>
                         </div>
-                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center'style={{backgroundImage:`url(${image})`, width: '100%', height: '100%'}}>
                         <div className='mb-8'>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>

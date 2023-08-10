@@ -16,4 +16,5 @@ export {
     Slider,
     Stats,
     Testim,
+    
 };

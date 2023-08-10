@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Swiper, SwiperSlide } from 'swiper/react';
 
 import './Slider.css'
@@ -12,6 +12,9 @@ import { EffectFade, Autoplay, Pagination, Navigation, Scrollbar, A11y } from 's
 import { cam1,cam2, cam3, cam4 } from '../../constants/images';
 
 export default function Slider() {
+
+    
+
     return (
         <Swiper
             spaceBetween={30}

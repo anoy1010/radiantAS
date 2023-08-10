@@ -10,6 +10,7 @@ import Features from './container/features/Features';
 function App() {
   return (
     <div>
+  
       <Navbar />
       <Slider />
       <Banner/>

@@ -57,28 +57,25 @@ function ServP({sousTitre1, titre1, titre2, image1,image2,image3, imageTitle1, i
                     <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
                     <h2 className='text-5xl w-[700px] text-center   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 </div>
-                <div className='grid grid-cols-3 px-32 place-items-center gap-8'>
+                <div className='grid grid-cols-3 px-32 place-items-center gap-8 '>
                     <div className=' relative'>
                         <img src={image1} className='w-screen h-full object-cover'/>
-                        <div className='absolute top-[50%] flex flex-col justify-center items-center '>
+                        <div className='absolute flex flex-col justify-center items-center '>
+                            <h1>{imageTitle1}</h1>
+                            <h4> {imageSousTitle1} </h4>
+                        </div>
+                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center  ' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                        <div className='mb-8'>
+                            <h1>{imageTitle1}</h1>
+                            <h4> {imageSousTitle1} </h4>
+                        </div>
+                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center  ' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                        <div className='mb-8'>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>
                         </div>
                     </div>
-                    <div className=' relative'>
-                        <img src={image2} className='w-screen h-full object-cover' />
-                        <div className='absolute flex flex-col justify-center items-center '>
-                            <h1>{imageTitle2}</h1>
-                            <h4> {imageSousTitle2} </h4>
-                        </div>
-                    </div>
-                    <div className=' relative'>
-                        <img src={image3} className='w-screen h-full object-cover' />
-                        <div className='absolute flex flex-col justify-center items-center '>
-                            <h1>{imageTitle3}</h1>
-                            <h4> {imageSousTitle3} </h4>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

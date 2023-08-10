@@ -68,7 +68,7 @@ function ServP({sousTitre1, titre1, titre2, image1,image2,image3, imageTitle1, i
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>
                         </div>
-                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center'style={{backgroundImage:`url(${image})`, width: '100%', height: '100%'}}>
+                    </div><div className=' bg-cover bg-center flex flex-col justify-end items-center'style={{backgroundImage:`url(${image3})`, width: '100%', height: '100%'}}>
                         <div className='mb-8'>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>

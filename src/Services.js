@@ -57,10 +57,10 @@ function ServP({sousTitre1, titre1, titre2, image1,image2,image3, imageTitle1, i
                     <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
                     <h2 className='text-5xl w-[700px] text-center   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 </div>
-                <div className='grid grid-cols-3 px-32 place-items-center gap-8 '>
+                <div className='grid grid-cols-3 px-32 place-items-center gap-8'>
                     <div className=' relative'>
                         <img src={image1} className='w-screen h-full object-cover'/>
-                        <div className='absolute flex flex-col justify-center items-center '>
+                        <div className='absolute top-[50%] flex flex-col justify-center items-center '>
                             <h1>{imageTitle1}</h1>
                             <h4> {imageSousTitle1} </h4>
                         </div>

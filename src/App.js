@@ -1,27 +1,19 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import { Header, Hero, Intro,  }from './container';
-import { Navbar, Footer, Slider, Stats, Testim } from './components';
-import Banner from './components/banner/Banner';
-import Services from './container/services/Services';
-import Features from './container/features/Features';
 
+import {Route, Links, Router, Routes} from 'react-router-dom'
+
+import Home from './Home';
+import Pages from './Pages'
+import Contacts from './Contacts'
+import Services from './Services';
 
 function App() {
   return (
     <div>
-  
-      <Navbar />
-      <Slider />
-      <Banner/>
-      <Hero />
-      <Services/>
-      <Features/>
-      <Stats/>
-      <Testim/>
-      <Footer />
 
-
+      <Services />
+      
     </div>
   );
 }

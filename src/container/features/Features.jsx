@@ -22,8 +22,7 @@ const Features = () => {
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold '/>Make key systems</div>
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold '/>Make key systems</div>
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold '/>Make key systems</div>
-                    
-            </div>
+                  </div>
             </div>
             
         </div>

@@ -1,16 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useDebugValue } from 'react'
-import { Navbar } from './components'
+import { Footer, Navbar } from './components'
 import { cam6 } from './constants/images'
 import {FaCheck} from 'react-icons/fa' 
 import {PiDotsThreeOutlineFill} from 'react-icons/pi'
 import {GiCalculator} from 'react-icons/gi'
+import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 
 const Services = () => {
   return (
     <div>
       <Navbar/>
-      <Hero 
+      <BannersHero
         titre1="We Offer, "
         text1="Professional and exception Services"
         buttonText1="Make an appointement"
@@ -45,15 +46,22 @@ const Services = () => {
         />
         <NewSletter
             sousTitre1=""
-            titre1="Want to know about our  ofter first"
+            titre1="Want to know about our  ofter first "
             titre2="suscribe to our newsletter"
         />
-
+        <BannersFeat
+            titre1="We Offer, "
+            text1="Professional and exception Services"
+            buttonText1="Make an appointement "
+            buttonText2="Contact us online"
+            image3={cam6}
+        />
+        <Footer/>
     </div>
   )
 }
 
-function Hero({titre1, text1, buttonText1, buttonText2 }) {
+function BannersHero({titre1, text1, buttonText1, buttonText2 }) {
         return (
             <div>
                 <div className=''>
@@ -63,7 +71,6 @@ function Hero({titre1, text1, buttonText1, buttonText2 }) {
                         </div>
                         <div className='space-x-8 '>
                             <button className='px-6 py-4 bg-[#111047] text-[#FF9900] hover:bg-[#25244e] uppercase font-semibold transition ease-in-out duration-300'>{buttonText1}</button>
-                            <button className='px-6 py-4 bg-[#FF9900] text-[#111047]  ring-2 ring-[#111047] uppercase font-semibold hover:text-[#FF9900] hover:bg-[#111047] transition ease-in-out duration-300'>{buttonText2}</button>
                         </div>
                     </div>
                 </div>
@@ -206,18 +213,174 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
 
 function NewSletter({sousTitre1, titre1,titre2}) {
     return(
-        <div>
-            <div className='py-8 flex flex-col justify-around items-center gap-y-8'>
-                    <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
-                    <h2 className='text-5xl w-[700px] text-center capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
-                </div>
+        <div className=''>
             <div>
-                <div></div>
-            </div>
-
+                <div className="relative isolate overflow-hidden bg-white  py-16 sm:py-24 lg:py-32">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+                            <div className="max-w-xl lg:max-w-lg">
+                                <h2 className='text-3xl w-[500px] text-left sm:text-4xl capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
+                                <p className="mt-4 text-lg leading-8 text-secondColor">
+                                Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt
+                                dolore.
+                                </p>
+                                <div className="mt-6 flex max-w-md gap-x-4">
+                                    <label htmlFor="email-address" className="sr-only">
+                                        Email address
+                                    </label>
+                                    <input
+                                        id="email-address"
+                                        name="email"
+                                        type="email"
+                                        autoComplete="email"
+                                        required
+                                        className="min-w-0 flex-auto rounded-md border-0 bg-firstColor/25 px-3.5 py-2 text-secondColor shadow-sm ring-1 ring-inset ring-firstColor/40 focus:ring-2 focus:ring-inset focus:ring-firstColor sm:text-sm sm:leading-6"
+                                        placeholder="Enter your email"
+                                    />
+                                    <button
+                                        type="submit"
+                                        className="flex-none rounded-md bg-firstColor px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition ease-in duration-200 hover:bg-firstColor/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-firstColor"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                                <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+                                    <div className="flex flex-col items-start">
+                                        <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                                            <CalendarDaysIcon className="h-6 w-6 text-firstColor" aria-hidden="true" />
+                                        </div>
+                                        <dt className="mt-4 font-semibold text-secondColor">Weekly articles</dt>
+                                        <dd className="mt-2 leading-7 text-secondColor/70">
+                                            Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                                        </dd>
+                                    </div>
+                                    <div className="flex flex-col items-start">
+                                        <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                                            <HandRaisedIcon className="h-6 w-6 text-firstColor" aria-hidden="true" />
+                                        </div>
+                                        <dt className="mt-4 font-semibold text-secondColor">No spam</dt>
+                                        <dd className="mt-2 leading-7 text-secondColor/70">
+                                            Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+                            <div
+                            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-firstColor/60 to-firstColor opacity-30"
+                            style={{
+                                clipPath:
+                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                            }}
+                            />
+                        </div>
+                    </div>
+                </div>
         </div>
     )
-    
+}
+
+function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
+    return (
+        <div>
+            <div className=''>
+                <div class="container mx-auto py-2 ">
+                    <div class="-m-1 flex flex-wrap h-[1000px] md:-m-2">
+                        <div class="flex w-1/2 h-4/4 flex-wrap">
+                            <div class=" w-full  h-full cursor-pointer relative overflow-hidden bg-cover2">
+                                <img  data-popover-target="popover-description" 
+                                alt="gallery"
+                                class="block h-full w-full  object-cover object-center transition duration-300 ease-in-out hover:scale-110"
+                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+                                <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <p>And here's some amazing content. It's very engaging. Right?</p>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex w-1/2 flex-wrap">
+                            <div data-popover-target="popover-default" class=" w-1/2 cursor-pointer relative overflow-hidden bg-cover">
+                                <img 
+                                alt="gallery"
+                                class="block h-full w-full  object-cover object-center transition duration-300 ease-in-out hover:scale-110"
+                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+                                <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <p>And here's some amazing content. It's very engaging. Right?</p>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+
+                            </div>
+                            <div data-popover-target="popover-default" class=" w-1/2 cursor-pointer relative overflow-hidden bg-cover">
+                                <img 
+                                alt="gallery"
+                                class="block h-full w-full  object-cover object-center transition duration-300 ease-in-out hover:scale-110"
+                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+                                <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <p>And here's some amazing content. It's very engaging. Right?</p>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+
+                            </div>
+                            <div data-popover-target="popover-default" class=" w-1/2 cursor-pointer relative overflow-hidden bg-cover">
+                                <img 
+                                alt="gallery"
+                                class="block h-full w-full  object-cover object-center transition duration-300 ease-in-out hover:scale-110"
+                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+                                <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <p>And here's some amazing content. It's very engaging. Right?</p>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+
+                            </div>
+                            <div data-popover-target="popover-default" class=" w-1/2 cursor-pointer relative overflow-hidden bg-cover">
+                                <img 
+                                alt="gallery"
+                                class="block h-full w-full  object-cover object-center transition duration-300 ease-in-out hover:scale-110"
+                                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+                                <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <p>And here's some amazing content. It's very engaging. Right?</p>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+
+                            </div>  
+                        </div>
+                    </div>                          
+                </div>
+                <div className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
+                    <div className='w-[600px]'>
+                        <h2 className='text-4xl  capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
+                    </div>
+                    <div className='space-x-8 '>
+                        <button className='px-6 py-4 bg-[#111047] text-[#FF9900] hover:bg-[#25244e] uppercase font-semibold transition ease-in-out duration-300'>{buttonText1}</button>
+                        <button className='px-6 py-4 bg-[#FF9900] text-[#111047]  ring-2 ring-[#111047] uppercase font-semibold hover:text-[#FF9900] hover:bg-[#111047] transition ease-in-out duration-300'>{buttonText2}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Services

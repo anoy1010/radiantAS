@@ -82,7 +82,7 @@ const Services = () => {
             elem,{
                 opacity:0,
                 x:-200
-            },{
+            },{ 
                 opacity:1,
                 x:0,
                 delay : delay || 0.6,
@@ -114,10 +114,26 @@ const Services = () => {
         )
         
     }
+    const bannerSlide = (elem, delay, duration) => {
+        gsap.fromTo(
+            elem,{  
+                x:-2000,            
+            },{
+                opacity:1,
+                x:0,
+                delay: delay || 0.5,
+                duration: duration || 0.5,
+                scrollTrigger:{
+                    trigger:elem,
+                }
+
+            }
+        )
+    }
     
 
     useEffect(() => {
-        slideInTop("#bannersHero","0.5","1");
+        
         slideInTop("#image1","1","0.5");
         slideInBottom("#box4","3","1");
       }, [])
@@ -136,6 +152,8 @@ const Services = () => {
       useEffect(() => {
         slideInCenter("#title","1","1");
         slideInCenter("#title1","1","1");
+        bannerSlide("#bannerHero","1","1");
+        bannerSlide("#bannerHero1","1","1");
       }, [])
       
       
@@ -213,7 +231,7 @@ function HeroSection() {
 function BannersHero({titre1, text1, buttonText1, buttonText2 }) {
         return (
             <div>
-                <div className='' id='bannersHero'>
+                <div className='' id='bannerHero'>
                     <div className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
                         <div className='w-[600px]'>
                             <h2 className='text-4xl  capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
@@ -434,7 +452,7 @@ function NewSletter({sousTitre1, titre1,titre2}) {
 function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
     return (
         <div>
-            <div className=''>
+            <div className='bannerHero'>
                 <div class="container mx-auto py-2 ">
                     <div class="-m-1 flex flex-wrap h-[1000px] md:-m-2">
                         <div class="flex w-1/2 h-4/4 flex-wrap">
@@ -518,7 +536,7 @@ function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
                         </div>
                     </div>                          
                 </div>
-                <div className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
+                <div id='bannerHero1' className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
                     <div className='w-[600px]'>
                         <h2 className='text-4xl  capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
                     </div>

@@ -7,12 +7,13 @@ import Home from './Home';
 import Pages from './Pages'
 import Contacts from './Contacts'
 import Services from './Services';
+import Login from './loginForm/Login';
 
 function App() {
   return (
     <div>
 
-      <Services />
+      <Login />
       
     </div>
   );

@@ -33,7 +33,7 @@ function Login() {
     
 
   return (
-    <div className='h-screen bg-cover bg-center'  style={{backgroundImage:`url(${t1})`, width: '100%', height: '100%'}}>
+    <div className='h-screen w-full  bg-cover'  style={{backgroundImage:`url(${t1})`}}>
         <Logo />
         <Form />
     </div>
@@ -52,7 +52,7 @@ function Form() {
     return(
         <div className='flex justify-between '>
             <div className='h-[500px] px-24 flex flex-col gap-y-8 justify-end'>
-                <div className='flex flex-col w-[400px]'>
+                <div className='flex flex-col w-[400px] text-white'>
                     <h2 className='text-xl font-semibold uppercase '>join your enterprise</h2>
                     <h1 className='text-6xl font-bold p-0 uppercase'>Company</h1>
                     <h3 className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio quae totam dolor deleniti deserunt, sapiente, minus ipsa temporibus asperiores officia, dolores dolorum? Beatae, laboriosam ipsa. Nesciunt quasi aliquam vel.</h3>
@@ -60,7 +60,7 @@ function Form() {
                 <div>
                     <div className='flex items-center'>
                         <button className='px-14 py-4 rounded-l-2xl bg-firstColor text-white hover:bg-white hover:text-firstColor  transition ease-in duration-200 '>Login</button>
-                        <button className='px-14 py-4 rounded-r-2xl bg-transparent text-firstColor   hover:bg-firstColor hover:text-white hover:border-white border-2  transition ease-in duration-200'>Register</button>
+                        <button className='px-14 py-4 rounded-r-2xl bg-white text-firstColor   hover:bg-firstColor hover:text-white hover:border-white   transition ease-in duration-200'>Register</button>
                     </div>
                 </div>
             </div>

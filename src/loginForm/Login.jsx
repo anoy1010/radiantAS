@@ -34,8 +34,10 @@ function Login() {
 
   return (
     <div className='h-screen w-full  bg-cover'  style={{backgroundImage:`url(${t1})`}}>
-        <Logo />
-        <Form />
+        <div className='bg-black/50'>
+            <Logo />
+            <Form />
+            </div>
     </div>
   )
 }
@@ -64,13 +66,13 @@ function Form() {
                     </div>
                 </div>
             </div>
-            <div className='w-[450px] flex flex-col px-8 mr-32 justify-center  h-[600px] items-center gap-y-8'>
+            <div className='w-[450px] flex flex-col px-8 mr-32 justify-center bg-white rounded-2xl  h-[600px] items-center gap-y-8'>
                 <div className='text-center'>
                     <h2 className='font-bold text-xl'> Account Login</h2>
                 </div>
                 <div className='flex flex-col w-[90%] gap-y-8'>
-                    <input type="text" placeholder='username and email' className='rounded-lg contrast-more:border-firstColor contrast-more:placeholder-firstColor' />
-                    <input type="text" placeholder='password' className='rounded-lg contrast-more:border-firstColor contrast-more:placeholder-firstColor' />
+                    <input type="text" placeholder='username and email' className='rounded-lg border-firstColor focus:ring-firstColor focus:ring-2  contrast-more:placeholder-firstColor' />
+                    <input type="text" placeholder='password' className='rounded-lg border-firstColor focus:ring-firstColor focus:ring-2   contrast-more:placeholder-firstColor' />
                 </div>
                 <div className='flex w-[90%] justify-between'>
                     <div className='flex gap-x-2 items-center'>

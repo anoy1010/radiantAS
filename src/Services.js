@@ -1,16 +1,44 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useDebugValue } from 'react'
+import React, { useDebugValue, useRef,useEffect, useState } from 'react'
 import { Footer, Navbar } from './components'
 import { cam6 } from './constants/images'
 import {FaCheck} from 'react-icons/fa' 
 import {PiDotsThreeOutlineFill} from 'react-icons/pi'
 import {GiCalculator} from 'react-icons/gi'
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
+import { video } from './constants/images'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import animation from './constants/animation'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
 
 const Services = () => {
+
+useEffect(() => {
+    const triggers = [
+        {}
+    ]
+}
+
+)
+
+
   return (
+
     <div>
-      <Navbar/>
+      <Navbar />
+      <HeroSection />   
+
       <BannersHero
         titre1="We Offer, "
         text1="Professional and exception Services"
@@ -56,9 +84,31 @@ const Services = () => {
             buttonText2="Contact us online"
             image3={cam6}
         />
+        <PreniumServScroll 
+            sousTitre1="Prenium service"
+            titre1="our service "
+            titre2="make your life comfortable"
+        />
         <Footer/>
     </div>
   )
+}
+
+
+function HeroSection(params) {
+    return (
+        <div>
+            <div className='border rounded-lg p-8'>
+                <video
+                    src={video}
+                    type="video/mp4"
+                    className="clip w-full rounded-2xl "
+                    autoplay loop controls muted>
+                </video>
+            </div>
+        </div>
+    )
+    
 }
 
 function BannersHero({titre1, text1, buttonText1, buttonText2 }) {
@@ -120,7 +170,7 @@ function WhatWeDo ({sousTitre2, titre1, titre2, image2}) {
       ]
 
     return (
-        <div className='h-screen grid grid-cols-2 place-content-center px-24 gap-x-12'>
+        <div className='h-screen grid grid-cols-2 place-content-center px-24 gap-x-12 gs_reveal gs_reveal_fromLeft'>
             <div className='bg-cover bg-center relative' style={{backgroundImage:`url(${image2})`, width: '70%', height: '100%'}}>
                     <div className="absolute left-[90px] bottom-8 w-[500px] py-4 sm:py-8 bg-firstColor ">
                         <div className="px-6  lg:px-4 gap-8 ">
@@ -137,7 +187,7 @@ function WhatWeDo ({sousTitre2, titre1, titre2, image2}) {
                         </div>
                     </div>
             </div>
-            <div className='flex flex-col  gap-y-8'>
+            <div className='flex flex-col  gap-y-8 gs_reveal gs_reveal'>
                 <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre2}</h3>
                 <h2 className='text-5xl w-[700px] text-left   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 <p className=''>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux </p>
@@ -214,7 +264,7 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
 function NewSletter({sousTitre1, titre1,titre2}) {
     return(
         <div className=''>
-            <div>
+            <div className=''>
                 <div className="relative isolate overflow-hidden bg-white  py-16 sm:py-24 lg:py-32">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -377,6 +427,130 @@ function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
                         <button className='px-6 py-4 bg-[#111047] text-[#FF9900] hover:bg-[#25244e] uppercase font-semibold transition ease-in-out duration-300'>{buttonText1}</button>
                         <button className='px-6 py-4 bg-[#FF9900] text-[#111047]  ring-2 ring-[#111047] uppercase font-semibold hover:text-[#FF9900] hover:bg-[#111047] transition ease-in-out duration-300'>{buttonText2}</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+function PreniumServScroll({sousTitre1, titre1, titre2}) {
+
+    const [swiperRef, setSwiperRef] = useState(null);
+
+  
+
+
+    return(
+        <div className='h-[100%]'>
+            <div>
+                <div className='p-14 flex flex-col justify-center items-center gap-y-8'>
+                    <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
+                    <h2 className='text-5xl w-[700px] text-center capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
+                </div>
+                <Swiper
+                    onSwiper={setSwiperRef}
+                    slidesPerView={3}
+                    spaceBetween={10}
+                    
+                    breakpoints={{
+                        640: {
+                          slidesPerView: 2,
+                          spaceBetween: 20,
+                        },
+                        768: {
+                          slidesPerView: 3,
+                          spaceBetween: 40,
+                        },
+                        1024: {
+                          slidesPerView: 3,
+                          spaceBetween: 50,
+                        },
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                <div >
+                
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4  hover:origin-top'>
+                        <div className='group bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4 transition ease-in-out duration-300 hover:-translate-y-6'>
+                            <div className='p-4'>
+                                <GiCalculator className='font-bold text-[150px] text-firstColor transition ease-in  duration-300 group-hover:text-secondColor'/>
+                            </div>
+                            <h2 className='font-bold text-3xl capitalize '>ip camera</h2>
+                            <p>sod des esium od tempor </p>
+                            <PiDotsThreeOutlineFill className=' text-4xl font-bold text-secondColor/50 transition ease-in-out duration-300  group-hover:text-firstColor '/>
+                        </div>
+                    </SwiperSlide>
+                    
+                </div>
+                </Swiper>
+
+                <div className='flex justify-center items-center my-8 '>
+                    <a className="m-16 relative group cursor-pointer">
+                        <a>View all services</a>
+                        <span className="absolute -bottom-1 left-1/2 w-0 h-1 bg-firstColor duration-300 ease-in-out group-hover:w-1/2 group-hover:transition-all"></span>
+                        <span className="absolute -bottom-1 right-1/2 w-0 h-1 bg-firstColor duration-300 ease-in-out group-hover:w-1/2 group-hover:transition-all"></span>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,20 +1,39 @@
-  import React, {useState, useEffect} from 'react'
+  import React, {useState, useEffect, useRef} from 'react'
   import { logo, logo1, logo2 } from '../../constants/images';
   import './Navbar.css';
   import {FiSearch} from 'react-icons/fi'
+  import { gsap } from 'gsap';
   
   import ScrollTrigger from 'gsap/ScrollTrigger';
 
   const Navbar = () => {
 
     const [toggleMenu, setToggleMenu] = useState(false);
+    const navHead = useRef (null)
+    
+    function Anim() {
+      useEffect (() => {
 
-    
-    
+        gsap.To( ".navHead", {
+          y:1000,
+          duration:3,
+          ScrollTrigger: {
+              trigger:"navHead",
+              start:"top top",
+              end:"bottom bottom",
+              makers:true,
+              scrub:true,
+              toggleAction:"restart none none none"
+              
+          },
+        })
+      },[])
+      
+    }
 
 
     return (
-      <nav className='navback'>
+      <nav className='navback navHead' >
         <div className='px-14 py-0 my-0 flex justify-between items-center'>
           <div className='flex  w-[500px] h-[100px] justify-between items-center gap-8  '>
             <img className='c w-[100px]' src={logo1} alt="Radiant" />

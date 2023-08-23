@@ -8,6 +8,7 @@ import cam3 from '../assets/images/cam3.jpg'
 import cam4 from '../assets/images/cam4.jpg'
 import cam5 from '../assets/images/cam5.jpg'
 import cam6 from '../assets/images/cam6.jpg'
+import video from '../assets/images/video.mp4'
 
 
 
@@ -23,4 +24,5 @@ export {
   cam4,
   cam5,
   cam6,
+  video
 };

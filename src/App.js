@@ -14,19 +14,30 @@ import Register from './loginForm/Register';
 import { Routes, Route } from 'react-router-dom';
 import { Footer, Navbar } from './components';
 
+
+function PrimaryPage() {
+  return(
+    <div>
+      
+      <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/Services' element={<Services />}/>
+          <Route path='/loginForm/Login' element={<Login />}  />
+          <Route path='/loginForm/Register' element={<Register/>}/> 
+      </Routes>
+     
+    </div>
+  )
+  
+}
+
 function App() {
   return (
     <div>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/Services' element={<Services />}/>
-        
-      
-      </Routes>
-      <Footer/>
+      <PrimaryPage/>  
     </div>
   );
 }
+
 
 export default App;

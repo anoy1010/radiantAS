@@ -57,7 +57,9 @@
           <div className='flex gap-8 items-center'>
             <p className='font-bold'>+225 0987 36778 83</p>
             <button className=' w-auto px-6 h-[50px] bg-[#FF9900] text-[#111047] font-extrabold tracking-wide hover:bg-[#fcd190] transition ease-in-out duration-300  '> Visiter Safer </button>
+            <a href="" className=' w-auto px-6 h-[50px] bg-[#FF9900] text-[#111047] font-extrabold tracking-wide hover:bg-[#fcd190] transition ease-in-out duration-300 flex items-center text-xl'><Link to='/loginForm/Login'>Connexion/Inscription</Link></a>
           </div>
+
         </div>
       </nav>
     )

@@ -2,8 +2,13 @@
   import { logo, logo1, logo2 } from '../../constants/images';
   import './Navbar.css';
   import {FiSearch} from 'react-icons/fi'
+  import { Link } from 'react-router-dom';
   
-  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+
+  import Home from '../../Home';
+  import Services from '../../Services';
+  import Contacts from '../../Contacts';
 
   const Navbar = () => {
 
@@ -14,6 +19,8 @@
 
 
     return (
+     
+     
       <nav className='navback'>
         <div className='px-14 py-0 my-0 flex justify-between items-center'>
           <div className='flex  w-[500px] h-[100px] justify-between items-center gap-8  '>
@@ -21,18 +28,10 @@
             <div className='flex justify-center items-center'>
               <ul className='flex gap-8 '>
               <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={0} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '>Home</label>
-                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-2 shadow bg-[#111047] w-52">
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 1</a></li>
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 2</a></li>
-                  </ul>
+                  <label tabIndex={0} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/'>Home</Link></label>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={1} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '>Services</label>
-                  <ul tabIndex={1} className="dropdown-content z-[1] menu p-2 mt-2 shadow bg-[#111047] w-52">
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 1</a></li>
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 2</a></li>
-                  </ul>
+                  <label tabIndex={1} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Services'>Services</Link></label>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
                   <label tabIndex={2} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '>Pages</label>

@@ -8,7 +8,6 @@ import Features from './container/features/Features'
 const Home = () => {
   return (
     <div>
-       <Navbar />
       <Slider />
       <Banner />
       <Hero />
@@ -16,7 +15,6 @@ const Home = () => {
       <Features />
       <Stats />
       <Testim />
-      <Footer />
     </div>
   )
 }

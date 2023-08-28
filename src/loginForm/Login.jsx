@@ -34,7 +34,7 @@ function Login() {
 
   return (
     <div className='h-screen w-full  bg-cover'  style={{backgroundImage:`url(${t1})`}}>
-        <div className='bg-black/50'>
+        <div className='bg-black/50 h-screen'>
             <Logo />
             <Form />
             </div>

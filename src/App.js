@@ -15,6 +15,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer, Navbar } from './components';
 
 
+
 function PrimaryPage() {
   return(
     <div>
@@ -24,6 +25,9 @@ function PrimaryPage() {
           <Route path='/Services' element={<Services />}/>
           <Route path='/loginForm/Login' element={<Login />}  />
           <Route path='/loginForm/Register' element={<Register/>}/> 
+          <Route path='/Contacts' element={<Contacts/>}/> 
+
+
       </Routes>
      
     </div>

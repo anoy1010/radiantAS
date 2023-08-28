@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.Container {
+  background: hsla(36, 100%, 50%, 1);
+
+  background: linear-gradient(90deg, hsla(36, 100%, 50%, 1) 0%, hsla(241, 64%, 17%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(36, 100%, 50%, 1) 0%, hsla(241, 64%, 17%, 1) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(36, 100%, 50%, 1) 0%, hsla(241, 64%, 17%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF9900", endColorstr="#111049", GradientType=1 );
+}

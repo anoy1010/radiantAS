@@ -41,11 +41,8 @@
                   </ul>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={3} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '>Contacts</label>
-                  <ul tabIndex={3} className="dropdown-content z-[1] menu p-2 mt-2 shadow bg-[#111047] w-52">
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 1</a></li>
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 2</a></li>
-                  </ul>
+                  <label tabIndex={3} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Contacts'>Contact</Link></label>
+                  
                 </div>
                 <div>
                   <button> <FiSearch style={{color:'#111047', fontSize:'20px'}} /></button>

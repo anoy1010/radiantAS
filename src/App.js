@@ -13,6 +13,7 @@ import Personallogin from './loginForm/Personallogin';
 import Register from './loginForm/Register';
 import { Routes, Route } from 'react-router-dom';
 import { Footer, Navbar } from './components';
+import About from './About';
 
 
 
@@ -26,6 +27,7 @@ function PrimaryPage() {
           <Route path='/loginForm/Login' element={<Login />}  />
           <Route path='/loginForm/Register' element={<Register/>}/> 
           <Route path='/Contacts' element={<Contacts/>}/> 
+          <Route path='/About' element={<About/>}/> 
 
 
       </Routes>

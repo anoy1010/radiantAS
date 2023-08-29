@@ -34,11 +34,8 @@
                   <label tabIndex={1} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Services'>Services</Link></label>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={2} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '>Pages</label>
-                  <ul tabIndex={2} className="dropdown-content z-[1] menu p-2 mt-2 shadow bg-[#111047] w-52">
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 1</a></li>
-                    <li className=''><a className='w-[90px] text-[#FF9900] hover:text-[#FF9900] hover-underline-animation'>Item 2</a></li>
-                  </ul>
+                  <label tabIndex={2} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/About'>About  </Link></label>
+                  
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
                   <label tabIndex={3} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Contacts'>Contact</Link></label>

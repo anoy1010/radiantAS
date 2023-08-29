@@ -7,6 +7,7 @@ import { ScrollToPlugin } from 'gsap/all'
 import { logo, logo1, logo2, pont, t1 } from '../constants/images'
 
 import './Login.css'
+import { Link } from 'react-router-dom'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -61,13 +62,21 @@ function Form() {
                 </div>
                 <div>
                     <div className='flex items-center'>
+
+                    <Link to ='/loginForm/login'>
                         <button className='px-14 py-4 rounded-l-2xl bg-firstColor text-white hover:bg-white hover:text-firstColor  transition ease-in duration-200 '>Login</button>
+                    </Link>
+
+                    <Link to ='/loginForm/Register'>
                         <button className='px-14 py-4 rounded-r-2xl bg-white text-firstColor   hover:bg-firstColor hover:text-white hover:border-white   transition ease-in duration-200'>Register</button>
+                    </Link>
+                       
+                        
                     </div>
                 </div>
             </div>
             <div className='w-[450px] flex flex-col px-8 mr-32 justify-center bg-white rounded-2xl  h-[600px] items-center gap-y-8'>
-                <div className='text-center'>
+                    <div className='text-center'>
                     <h2 className='font-bold text-xl'> Account Login</h2>
                 </div>
                 <div className='flex flex-col w-[90%] gap-y-8'>

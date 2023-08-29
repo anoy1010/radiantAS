@@ -160,7 +160,7 @@ const Services = () => {
 
   return (
     <div>
-      <Navbar/>
+        <Navbar/>
       <HeroSection />
       <BannersHero
         titre1="We Offer, "
@@ -207,7 +207,7 @@ const Services = () => {
             buttonText2="Contact us online"
             image3={cam6}
         />
-        <Footer/>
+       <Footer/>
     </div>
   )
 }

@@ -52,9 +52,12 @@ function HeroContact() {
               }}
               whileTap={{ scale: 0.8 }}
               animate={{
-                y:[30, 0, 30, 0],
+                
                 opacity:1, scale:1, 
                   transition:{
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17,
                     duration:1,
                     repeatDelay:1
                 }
@@ -89,7 +92,7 @@ function HeroContact() {
               }}
               whileTap={{ scale: 0.8 }}
               animate={{
-                y:[30, 0, 30, 0],
+                
                 opacity:1, scale:1, 
                   transition:{
                     type: "spring", 
@@ -129,9 +132,12 @@ function HeroContact() {
               }}
               whileTap={{ scale: 0.8 }}
               animate={{
-                y:[30, 0, 30, 0],
+                
                 opacity:1, scale:1, 
                   transition:{
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17,
                     duration:1,
                     repeatDelay:1
                 }
@@ -175,7 +181,7 @@ function FeaturesContact () {
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              First name
+              Nom 
             </label>
             <div className="mt-2.5">
               <input
@@ -189,7 +195,7 @@ function FeaturesContact () {
           </div>
           <div>
             <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              Last name
+              Prenom
             </label>
             <div className="mt-2.5">
               <input

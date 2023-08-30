@@ -27,5 +27,5 @@ export {
   cam5,
   cam6,
   pont,
-  t1
+  t1,
 };

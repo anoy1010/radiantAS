@@ -1,21 +1,21 @@
-  import React, {useState, useEffect} from 'react'
-  import { logo, logo1, logo2 } from '../../constants/images';
+  import React from 'react'
+  import { logo, logo1 } from '../../constants/images';
   import './Navbar.css';
   import {FiSearch} from 'react-icons/fi'
   import { Link } from 'react-router-dom';
-  
+  import { Dropdown } from 'flowbite-react';
 
 
-  import Home from '../../Home';
-  import Services from '../../Services';
-  import Contacts from '../../Contacts';
+
 
   const Navbar = () => {
 
-    const [toggleMenu, setToggleMenu] = useState(false);
 
-    
-    
+
+
+
+
+
 
 
     return (
@@ -25,13 +25,21 @@
         <div className='px-14 py-0 my-0 flex justify-between items-center'>
           <div className='flex  w-[500px] h-[100px] justify-between items-center gap-8  '>
             <img className='c w-[100px]' src={logo1} alt="Radiant" />
-            <div className='flex justify-center items-center'>
-              <ul className='flex gap-8 '>
-              <div  className='hover-underline-animation dropdown dropdown-hover'>
+            <div className='flex justify-center items-center menu-icon'>
+              
+
+
+              <ul className='flex gap-8' >
+                <div  className='hover-underline-animation dropdown dropdown-hover'>
                   <label tabIndex={0} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/'>Home</Link></label>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={1} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Services'>Services</Link></label>
+                  <label tabIndex={1} href="" className='nav-item text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s'
+                  >
+                    <Link to='/Services'>
+                      services
+                    </Link>
+                  </label>
                 </div>
                 <div  className='hover-underline-animation dropdown dropdown-hover'>
                   <label tabIndex={2} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/About'>About  </Link></label>

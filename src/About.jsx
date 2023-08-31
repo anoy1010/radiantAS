@@ -118,7 +118,7 @@ function Banner1() {
                         <span class="text-firstColor dark:text-firstColor-400">Join our social media</span>
                         </h2>
                     </div>
-
+                    
                     <div class="mb-6 md:mb-0 md:ml-auto">
                         
                         <button  type="button" data-te-ripple-init data-te-ripple-color="light"

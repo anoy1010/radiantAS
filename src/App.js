@@ -14,6 +14,8 @@ import Register from './loginForm/Register';
 import { Routes, Route } from 'react-router-dom';
 import { Footer, Navbar } from './components';
 import About from './About';
+import ServiceE from './ServiceE';
+import ServicesP from './ServicesP';
 
 
 
@@ -28,6 +30,10 @@ function PrimaryPage() {
           <Route path='/loginForm/Register' element={<Register/>}/> 
           <Route path='/Contacts' element={<Contacts/>}/> 
           <Route path='/About' element={<About/>}/> 
+          <Route path='/ServicesP' element={<ServicesP/>}/> 
+          <Route path='/ServiceE' element={<ServiceE/>}/> 
+
+
 
 
       </Routes>

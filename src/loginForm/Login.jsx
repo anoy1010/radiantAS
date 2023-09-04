@@ -46,7 +46,7 @@ function Logo() {
     return (
         <div>
             <div className='px-24 pt-8'>
-                <img className='h-16' src={logo2} alt="Logo" />
+                <Link to="/"><img className='h-16' src={logo2} alt="Logo" /></Link>
             </div>
         </div>
     )

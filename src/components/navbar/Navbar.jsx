@@ -1,70 +1,70 @@
-  import React from 'react'
-  import { logo, logo1 } from '../../constants/images';
-  import './Navbar.css';
-  import {FiSearch} from 'react-icons/fi'
-  import { Link } from 'react-router-dom';
-  import { Dropdown } from 'flowbite-react';
-
-
-
-
-  const Navbar = () => {
-
-
-
-
-
-
-
-
-
-    return (
-     
-     
-      <nav className='navback'>
-        <div className='px-14 py-0 my-0 flex justify-between items-center'>
-          <div className='flex  w-[500px] h-[100px] justify-between items-center gap-8  '>
-            <img className='c w-[100px]' src={logo1} alt="Radiant" />
-            <div className='flex justify-center items-center menu-icon'>
-              
-
-
-              <ul className='flex gap-8' >
-                <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={0} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/'>Home</Link></label>
-                </div>
-                <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={1} href="" className='nav-item text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s'
-                  >
-                    <Link to='/Services'>
-                      services
-                    </Link>
-                  </label>
-                </div>
-                <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={2} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/About'>About  </Link></label>
-                  
-                </div>
-                <div  className='hover-underline-animation dropdown dropdown-hover'>
-                  <label tabIndex={3} href="" className=' text-[#111047] hover:text-[#FF9900] transition-transform ease-out duration-300s  '><Link to='/Contacts'>Contact</Link></label>
-                  
-                </div>
-                <div>
-                  <button> <FiSearch style={{color:'#111047', fontSize:'20px'}} /></button>
-                </div>
-              </ul>
-            </div>
-            
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { logo2 } from "../../constants/images";
+import Button from "./Button";
+import NavLinks from "./NavLinks";
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <nav className="bg-white z-50">
+      <div className="flex items-center font-medium justify-around">
+        <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+         <Link to="/">
+          <img src={logo2} alt="logo" className="md:cursor-pointer h-14" />
+         </Link>
+          <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
+            <ion-icon  name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
-          <div className='flex gap-8 items-center'>
-            <p className='font-bold'>+225 0987 36778 83</p>
-            <button className=' w-auto px-6 h-[50px] bg-[#FF9900] text-[#111047] font-extrabold tracking-wide hover:bg-[#fcd190] transition ease-in-out duration-300  '> Visiter Safer </button>
-            <a href="" className=' w-auto px-6 h-[50px] bg-[#FF9900] text-[#111047] font-extrabold tracking-wide hover:bg-[#fcd190] transition ease-in-out duration-300 flex items-center text-xl'><Link to='/loginForm/Login'>Connexion/Inscription</Link></a>
-          </div>
-
         </div>
-      </nav>
-    )
-  }
+        <ul className="md:flex hidden uppercase items-center gap-8 font-bold">
+          <li>
+            <Link to="/" className="py-7 px-3 inline-block">
+              Home
+            </Link>
+          </li>
+          <NavLinks />
+          <li>
+            <Link to="/About" className="py-7 px-3 inline-block">
+             About
+            </Link>
+            <Link to="/Contacts" className="py-7 px-3 inline-block">
+              Contact
+            </Link>
+          </li> 
+        </ul>
+        <div className="md:block hidden">
+          <Button />
+        </div>
+        {/* Mobile nav */}
+        <ul
+          className={`
+        md:hidden bg-white text-secondColor fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+        duration-500 z-40 ${open ? "left-0" : "left-[-100%]"}
+        `}
+        >
+          <li>
+            <Link to="/" className="py-7 px-3 inline-block">
+              Home
+            </Link>
+          </li>
+          <NavLinks />
+          <li>
+            <Link to="/About" className="py-7 px-3 inline-block">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/Contacts" className="py-7 px-3 inline-block">
+              Contact
+            </Link>
+          </li>
+          <div className="py-5">
+            <Button />
+          </div>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-  export default Navbar
+export default Navbar;

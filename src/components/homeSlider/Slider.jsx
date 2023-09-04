@@ -100,6 +100,6 @@ export default function Slider() {
 
         </div>
         </SwiperSlide>
-    </Swiper>
+        </Swiper>
     )
 }

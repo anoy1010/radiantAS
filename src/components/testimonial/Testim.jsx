@@ -29,7 +29,7 @@ const Testim = () => {
         </figcaption>
       </figure>
     </div>
-  </section>
+    </section>
   )
 }
 

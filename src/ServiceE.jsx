@@ -3,7 +3,7 @@ import { Footer, Navbar } from './components'
 
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import { cam3, cam4 } from './constants/images';
+import { cam1, cam3, cam4 } from './constants/images';
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
@@ -166,10 +166,338 @@ function Firstsect () {
   )
 }
 
+function Barner(){
+  return(
+    <>
+      <div>
+        
+          <div class="mb-12 lg:mb-0 flex justify-center items-center mb-32">
+            <div
+              class="relative text-center w-[80%] z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mt-14 backdrop-blur-[30px]">
+              <h2 class="mb-6 text-4xl font-bold">Why is it so great?</h2>
+              <p class="mb-12 text-neutral-500 dark:text-neutral-300">
+                Nunc tincidunt vulputate elit. Mauris varius purus malesuada
+                neque iaculis malesuada. Aenean gravida magna orci, non
+                efficitur est porta id. Donec magna diam.
+              </p>
+
+              <div class="grid gap-x-6 md:grid-cols-3">
+                <div class="mb-12 md:mb-0">
+                  <h2 class="text-dark mb-4 text-3xl font-bold">10%</h2>
+                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                    Less sugar
+                  </h5>
+                </div>
+
+                <div class="mb-12 md:mb-0">
+                  <h2 class="text-dark mb-4 text-3xl font-bold">70%</h2>
+                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                    More flavor
+                  </h5>
+                </div>
+
+                <div class="">
+                  <h2 class="text-dark mb-4 text-3xl font-bold">0%</h2>
+                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                    Gluten
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+   
+      </div>
+    </>
+  )
+}
+function Herosection () {
+  return (
+    <>
+      <div className='grid grid-cols-2 h-screen'>
+        <div>
+          <img src={cam1} className='bg-cover object-cover h-screen w-auto' alt="" />
+        </div>
+        <div>
+          <div>
+            <div className='h-screen  place-content-center place-items-center px-32'>
+              <div className=' flex flex-col gap-y-4 w-auto  py-32'>
+                <h3  className='text-lg text-firstColor font-semibold'>we supply protection</h3>
+                <h1  className='text-5xl font-bold'>Personal Bodyguard <br /> for your safety</h1>
+                <p  className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud dolore magna aliqua.</p>
+                <div  className='flex gap-x-8'>
+                  <button className='px-8 py-4 bg-firstColor'> Get started</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+function Cardsection (){
+  return (
+    <>
+      <div>
+        <div className="py-4 text-center space-y-4 flex flex-col items-center">
+          <h3 className='text-[#64748b] text-[12px] uppercase'>prenium services</h3>
+          <h2 className='text-5xl  capitalize'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
+          <p className='w-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore doloribus et iste fugiat, voluptatem dignissimos delectus.</p>
+        </div>
+        <div class="grid-cols-1 px-32 sm:grid md:grid-cols-3 ">
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+              <img
+                class="hover:origin-center hover:scale-75 hover:rotate-12 transition ease-in-out duration-300"
+                src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+ }
 function Secondsect () {
   return (
     <>
-    
+      <div className='py-4'>
+        <div className="py-4 text-center space-y-4 flex flex-col items-center">
+          <h3 className='text-[#64748b] text-[12px] uppercase'>prenium services</h3>
+          <h2 className='text-5xl  capitalize'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
+          <p className='w-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore doloribus et iste fugiat, voluptatem dignissimos delectus.</p>
+        </div>
+      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div className="-m-1 flex flex-wrap md:-m-2">
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full  ">
+               <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full  ">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full ">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full ">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            className="group flex w-1/4 flex-wrap">
+            <div class="group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full ">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rouect-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full ">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+          <div className="group flex w-1/4 flex-wrap">
+            <div
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              className=" group-hover:opacity-80 group-hover:scale-125 transition ease-in-out duration-300 w-full ">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full object-cover object-center"
+                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+            <div className=''>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </>
   )
 }
@@ -189,8 +517,10 @@ const ServiceE = () => {
   return (
     <div>
       <Navbar />
-      <HeroService/>
-      <Firstsect />
+      {/*<HeroService/>*/}
+      <Herosection/>
+      <Barner/>
+      <Cardsection/>
       <Secondsect />
       <Thirdsect />
       <Footer/>

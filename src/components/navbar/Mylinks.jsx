@@ -27,5 +27,34 @@ export const links = [
         },
        
       ],
-    },
+      
+    }, {
+      name: "Solution",
+      submenu: true,
+      sublinks: [
+        {
+          Head: "Solutions electronique",
+          link: "/ServiceE",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+        {
+          Head: "Solutions technologique",
+          link: "/ServicesP",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+       
+      ],
+    }
   ];

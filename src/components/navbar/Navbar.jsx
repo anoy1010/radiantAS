@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { logo2 } from "../../constants/images";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
+import './Navbar.css'
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -16,18 +18,18 @@ const Navbar = () => {
             <ion-icon  name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
         </div>
-        <ul className="md:flex hidden uppercase items-center gap-8 font-bold">
+        <ul className="md:flex hidden uppercase items-center gap-8 font-bold ">
           <li>
-            <Link to="/" className="py-7 px-3 inline-block">
+            <Link to="/" className="px-3 inline-block hover-underline-animation">
               Home
             </Link>
           </li>
           <NavLinks />
           <li>
-            <Link to="/About" className="py-7 px-3 inline-block">
+            <Link to="/About" className="px-3 inline-block hover-underline-animation">
              About
             </Link>
-            <Link to="/Contacts" className="py-7 px-3 inline-block">
+            <Link to="/Contacts" className="px-3 inline-block hover-underline-animation">
               Contact
             </Link>
           </li> 
@@ -43,21 +45,21 @@ const Navbar = () => {
         `}
         >
           <li>
-            <Link to="/" className="py-7 px-3 inline-block">
-              Home
+            <Link to="/" className="my-7 px-3 inline-block hover-underline-animation">
+             Home
             </Link>
           </li>
           <li>
-            <NavLinks className="py-7 px-3 inline-block" />
+            <NavLinks className="hover-underline-animation px-3 inline-block hover-underline-animation" />
           </li>
           <li>
-            <Link to="/About" className="py-7 px-3 inline-block">
-              About
+            <Link to="/About" className="my-7 px-3 inline-block hover-underline-animation">
+            About
             </Link>
           </li>
           <li>
-            <Link to="/Contacts" className="py-7 px-3 inline-block">
-              Contact
+            <Link to="/Contacts" className="my-7 px-3 inline-block hover-underline-animation">
+            Contact
             </Link>
           </li>
           <div className="py-5">

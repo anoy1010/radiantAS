@@ -6,7 +6,7 @@ const Register2 = () => {
   return (
     <div>
       <div className='flex justify-center '>
-        <div className='w-[450px] flex flex-col px-8 justify-center bg-white shadow-lg shadow-firstColor ring-1 ring-firstColor rounded-2xl  h-auto pb-8 items-center gap-y-8'>
+        <div className='w-[450px] flex flex-col px-8 justify-center bg-white shadow-lg shadow-firstColor ring-1 ring-firstColor rounded-2xl  h-auto py-8 items-center gap-y-8'>
             <div className='text-center'>
                 <h2 className='font-bold text-xl'>Sign up 2 </h2>
             </div>
@@ -27,11 +27,7 @@ const Register2 = () => {
                 <input type="password" placeholder='Veuillez rzmplir ce champ' className='rounded-lg border-firstColor focus:ring-firstColor focus:ring-2  contrast-more:placeholder-firstColor' />
             </div>
             
-            <div className='w-[100%]'>
-                <button className='text-xl w-[100%] py-4 rounded-xl border-firstColor border-2  text-white bg-firstColor font-bold hover:bg-white hover:text-firstColor transition ease-in-out duration-100'>
-                    Next for creation account
-                </button>
-            </div>
+            
         </div>
     </div>
 </div>

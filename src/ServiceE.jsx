@@ -171,11 +171,11 @@ function Barner(){
     <>
       <div>
         
-          <div class="mb-12 lg:mb-0 flex justify-center items-center mb-32">
+          <div class="mb-12 lg:mb-24 flex justify-center items-center ">
             <div
-              class="relative text-center w-[80%] z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mt-14 backdrop-blur-[30px]">
+              class="relative text-center w-[80%] z-[1] block rounded-lg bg-secondColor text-white px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mt-14 backdrop-blur-[30px]">
               <h2 class="mb-6 text-4xl font-bold">Why is it so great?</h2>
-              <p class="mb-12 text-neutral-500 dark:text-neutral-300">
+              <p class="mb-12 text-white dark:text-neutral-300">
                 Nunc tincidunt vulputate elit. Mauris varius purus malesuada
                 neque iaculis malesuada. Aenean gravida magna orci, non
                 efficitur est porta id. Donec magna diam.
@@ -184,21 +184,21 @@ function Barner(){
               <div class="grid gap-x-6 md:grid-cols-3">
                 <div class="mb-12 md:mb-0">
                   <h2 class="text-dark mb-4 text-3xl font-bold">10%</h2>
-                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                  <h5 class="mb-0 text-lg font-medium text-white dark:text-neutral-300">
                     Less sugar
                   </h5>
                 </div>
 
                 <div class="mb-12 md:mb-0">
                   <h2 class="text-dark mb-4 text-3xl font-bold">70%</h2>
-                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                  <h5 class="mb-0 text-lg font-medium text-white dark:text-neutral-300">
                     More flavor
                   </h5>
                 </div>
 
                 <div class="">
                   <h2 class="text-dark mb-4 text-3xl font-bold">0%</h2>
-                  <h5 class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300">
+                  <h5 class="mb-0 text-lg font-medium text-white dark:text-neutral-300">
                     Gluten
                   </h5>
                 </div>
@@ -222,8 +222,8 @@ function Herosection () {
             <div className='h-screen  place-content-center place-items-center px-32'>
               <div className=' flex flex-col gap-y-4 w-auto  py-32'>
                 <h3  className='text-lg text-firstColor font-semibold'>we supply protection</h3>
-                <h1  className='text-5xl font-bold'>Personal Bodyguard <br /> for your safety</h1>
-                <p  className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud dolore magna aliqua.</p>
+                <h1  className='text-5xl text-secondColor font-bold'>Personal Bodyguard <br /> for your safety</h1>
+                <p  className='text-secondColor'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud dolore magna aliqua.</p>
                 <div  className='flex gap-x-8'>
                   <button className='px-8 py-4 bg-firstColor'> Get started</button>
                 </div>
@@ -240,13 +240,13 @@ function Herosection () {
 function Cardsection (){
   return (
     <>
-      <div>
+      <div className=''>
         <div className="py-4 text-center space-y-4 flex flex-col items-center">
           <h3 className='text-[#64748b] text-[12px] uppercase'>prenium services</h3>
-          <h2 className='text-5xl  capitalize'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
+          <h2 className='text-5xl  capitalize text-secondColor'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
           <p className='w-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore doloribus et iste fugiat, voluptatem dignissimos delectus.</p>
         </div>
-        <div class="grid-cols-1 px-32 sm:grid md:grid-cols-3 ">
+        <div class="grid-cols-1 px-32 sm:grid md:grid-cols-3  pt-8">
           <div
             class="mx-3 mt-6 flex flex-col self-start cursor-pointer group rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
             <a href="#!">
@@ -375,13 +375,13 @@ function Cardsection (){
 function Secondsect () {
   return (
     <>
-      <div className='py-4'>
+      <div className='py-8'>
         <div className="py-4 text-center space-y-4 flex flex-col items-center">
           <h3 className='text-[#64748b] text-[12px] uppercase'>prenium services</h3>
-          <h2 className='text-5xl  capitalize'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
+          <h2 className='text-5xl  capitalize text-secondColor'>Our services <span className='font-bold'>make your bussiness secure</span></h2>
           <p className='w-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore doloribus et iste fugiat, voluptatem dignissimos delectus.</p>
         </div>
-      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+      <div className="container mx-auto px-5 py-2 lg:px-32 lg:py-12">
         <div className="-m-1 flex flex-wrap md:-m-2">
           <div className="group flex w-1/4 flex-wrap">
             <div

@@ -71,7 +71,7 @@ const Register = () => {
       <Stepper nonLinear activeStep={activeStep} className='bg-white my-4 p-4 border-1 shadow-lg shadow-slate-400'>
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
-            <StepButton color= "inherit" onClick={handleStep(index)} >
+            <StepButton color= "inherit" sx={{ color:'#111047'}} onClick={handleStep(index)} >
               {label}
             </StepButton>
           </Step>
@@ -85,7 +85,7 @@ const Register = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Box sx={{ flex: '1 1 auto' }} />
-              <Button onClick={handleReset}>Reset</Button>
+              <Button onClick={handleReset} sx={{ mr: 1, color: 'white', background:'#ff9900', }} className='font-bold ring-firstColor ring-2 hover:text-firstColor  transition ease-in-out duration-300 '>Reset</Button>
             </Box>
           </React.Fragment>
         ) : (
@@ -97,15 +97,15 @@ const Register = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
-                color="inherit"
+                color='inherit'
                 disabled={activeStep === 0}
                 onClick={handleBack}
-                sx={{ mr: 1 }} className='bg-firstColor text-white '
+                sx={{ mr: 1,color:'white', background:'#ff9900', }} className='font-bold ring-firstColor ring-2 hover:text-firstColor  transition ease-in-out duration-300 '
               >
                 Back
               </Button>
               <Box sx={{ flex: '1 1 auto' }} />
-              <Button onClick={handleNext} sx={{ mr: 1 }} className='bg-firstColor text-white '>
+              <Button onClick={handleNext} sx={{ mr: 1, color: 'white', background:'#ff9900', }} className='font-bold ring-firstColor ring-2 hover:text-firstColor  transition ease-in-out duration-300 ' >
                 Next
               </Button>
               {activeStep !== steps.length &&
@@ -114,7 +114,7 @@ const Register = () => {
                     Step {activeStep + 1} already completed
                   </Typography>
                 ) : (
-                  <Button onClick={handleComplete}>
+                  <Button onClick={handleComplete} sx={{ mr: 1, color: 'white', background:'#ff9900', }} className='font-bold ring-firstColor ring-2 hover:text-firstColor  transition ease-in-out duration-300 '>
                     {completedSteps() === totalSteps() - 1
                       ? 'Finish'
                       : 'Inscription finish'}

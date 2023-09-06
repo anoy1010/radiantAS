@@ -1,6 +1,10 @@
+
+
+
 export const links = [
     {
       name: "Services",
+      link: "/Services",
       submenu: true,
       sublinks: [
         {
@@ -31,6 +35,8 @@ export const links = [
     }, {
       name: "Solution",
       submenu: true,
+      link: "/Solution",
+
       sublinks: [
         {
           Head: "Solutions electronique",

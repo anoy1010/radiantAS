@@ -18,7 +18,7 @@ const Navbar = () => {
             <ion-icon  name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
         </div>
-        <ul className="md:flex hidden uppercase items-center gap-8 font-bold ">
+        <ul className="md:flex hidden  uppercase items-center gap-8 font-bold ">
           <li>
             <Link to="/" className="px-3 inline-block hover-underline-animation">
               Home

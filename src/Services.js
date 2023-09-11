@@ -1,163 +1,22 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useDebugValue,useEffect, useRef } from 'react'
+import React, {useEffect} from 'react'
 import { Footer, Navbar } from './components'
 import { cam6 } from './constants/images'
 import {FaCheck} from 'react-icons/fa' 
 import {PiDotsThreeOutlineFill} from 'react-icons/pi'
 import {GiCalculator} from 'react-icons/gi'
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
-import { ScrollToPlugin } from 'gsap/all' 
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
 
 const Services = () => {
-
-    const slideInCenter = (elem, delay, duration)  => {
-        gsap.fromTo(
-            elem,{
-                opacity:0,
-                y:-100
-            },{
-                opacity:1,
-                y:0,
-                delay : delay || 0.6,
-                duration : duration || 0.6,
-                scrollTrigger:{
-                    trigger:elem,
-                    toggleActions:"restart pause reverse pause"
-                }
-            }
-
-        )
-
-    }
-
-    const slideInTop = (elem, delay, duration) =>{
-        gsap.fromTo(
-            elem,{
-                opacity:0,
-                y:-200
-            },{
-                opacity:1,
-                y:0,
-                delay : delay || 0.6,
-                duration : duration || 0.6,
-                scrollTrigger:{
-                    trigger:elem,
-                    start: "top center",
-                    end: "bottom center" 
-
-                }
-            }
-        )
-        
-    }
-
-    const slideInLeft = (elem, delay, duration) =>{
-        gsap.fromTo(
-            elem,{
-                opacity:0,
-                x:-200
-            },{
-                opacity:1,
-                x:0,
-                delay : delay || 0.6,
-                duration : duration || 0.6,
-                scrollTrigger:{
-                    trigger:elem,
-                    start: "top center",
-                    end: "bottom center" 
-                }
-            }
-        )
-        
-    }
-    const slideInRight = (elem, delay, duration) =>{
-        gsap.fromTo(
-            elem,{
-                opacity:0,
-                x:-200
-            },{ 
-                opacity:1,
-                x:0,
-                delay : delay || 0.6,
-                duration : duration || 0.6,
-                scrollTrigger:{
-                    trigger:elem,
-                    start: "top center",
-                    end: "bottom center" 
-                }
-            }
-        )
-        
-    }
-    const slideInBottom = (elem, delay, duration) =>{
-        gsap.fromTo(
-            elem,{
-                opacity:0,
-                y:100
-            },{
-                opacity:1,
-                y:0,
-                delay : delay || 0.6,
-                duration : duration || 0.6,
-                scrollTrigger:{
-                    trigger:elem,
-                    
-                }
-            }
-        )
-        
-    }
-    const bannerSlide = (elem, delay, duration) => {
-        gsap.fromTo(
-            elem,{  
-                x:-2000,            
-            },{
-                opacity:1,
-                x:0,
-                delay: delay || 0.5,
-                duration: duration || 0.5,
-                scrollTrigger:{
-                    trigger:elem,
-                }
-
-            }
-        )
-    }
-    
-
-    useEffect(() => {
-        
-        slideInTop("#image1","1","0.5");
-        slideInBottom("#box4","3","1");
-      }, [])
-
-      useEffect(() => {
-        slideInLeft("#box1","0.5","2");
-        slideInLeft("#box2","1","3");
-        slideInLeft("#box3","1.5","4");
-        slideInLeft("#soubox1","2","1");
-        slideInRight("#text1","2.5","1");
-        slideInRight("#text2","3","1");
-        slideInRight("#text3","3.5","1");
-
-      }, [])  
-
-      useEffect(() => {
-        slideInCenter("#title","1","1");
-        slideInCenter("#title1","1","1");
-        bannerSlide("#bannerHero","1","1");
-        bannerSlide("#bannerHero1","1","1");
-      }, [])
-      
-      
-
+    useEffect(()=> {
+        Aos.init()
+      },[])
   return (
     <div>
         <Navbar/>
@@ -215,7 +74,8 @@ const Services = () => {
 function HeroSection() {
     return (
         <div>
-            <div className='border rounded-lg p-8'>
+            <div data-aos="flip-left" 
+            className='border rounded-lg p-8'>
                 <video 
                     
                     type="video/mp4"
@@ -231,12 +91,12 @@ function HeroSection() {
 function BannersHero({titre1, text1, buttonText1, buttonText2 }) {
         return (
             <div>
-                <div className='' id='bannerHero'>
-                    <div className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
-                        <div className='w-[600px]'>
-                            <h2 className='text-4xl  capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
+                <div data-aos="fade-right">
+                    <div className=' flex justify-around items-center bg-[#FF9900] lg:h-[200px] lg:px-[150px] '>
+                        <div className='w-auto lg:w-[600px]'>
+                            <h2 className='text-center text-lg  md:text-2xl lg:text-4xl capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
                         </div>
-                        <div className='space-x-8 '>
+                        <div className='hidden space-x-8 '>
                             <button className='px-6 py-4 bg-[#111047] text-[#FF9900] hover:bg-[#25244e] uppercase font-semibold transition ease-in-out duration-300'>{buttonText1}</button>
                         </div>
                     </div>
@@ -249,24 +109,30 @@ function ServP({sousTitre1, titre1, titre2, image1,image2,image3, imageTitle1, i
     return (
         <div className='bg-gray-100'>
             <div className='my-4  h-screen flex flex-col justify-around'>
-                <div id='title' className='flex flex-col items-center gap-8  text-center w-[100%]'>
+                <div data-aos="fade-up" className='flex flex-col items-center gap-8  text-center w-[100%]'>
                     <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
                     <h2 className='text-5xl w-[700px] text-center   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 </div>
                 <div className='grid grid-cols-3 px-32 place-items-center gap-8 h-[400px]'>
-                    <div id='box1' className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
+                    <div data-aos="fade-right" 
+                    data-aos-offset="500"
+                    data-aos-duration="500" className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center' style={{backgroundImage:`url(${image1})`, width: '100%', height: '100%'}}>
                         <div className='mb-8 absolute'>
                             <h1 className='font-bold text-3xl text-white'>{imageTitle1}</h1>
                             <h4 className='font-semibold text-white text-center'> {imageSousTitle2} </h4>
                         </div>
                     </div>
-                    <div id='box2' className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center'style={{backgroundImage:`url(${image2})`, width: '100%', height: '100%'}}>
+                    <div div data-aos="fade-right" 
+                    data-aos-offset="250"
+                    data-aos-duration="500" className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center'style={{backgroundImage:`url(${image2})`, width: '100%', height: '100%'}}>
                         <div className='mb-8 absolute'>
                             <h1 className='font-bold text-3xl text-white'>{imageTitle1}</h1>
                             <h4 className='font-semibold text-white text-center'> {imageSousTitle3} </h4>
                         </div>
                     </div>
-                    <div id='box3' className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center'style={{backgroundImage:`url(${image3})`, width: '100%', height: '100%'}}>
+                    <div data-aos="fade-right" 
+                    data-aos-offset="100"
+                    data-aos-duration="500" className=' bg-cover bg-center flex brightness-50 h-[400px] flex-col justify-end items-center'style={{backgroundImage:`url(${image3})`, width: '100%', height: '100%'}}>
                         <div className='mb-8 absolute'>
                             <h1 className='font-bold text-3xl text-white'>{imageTitle1}</h1>
                             <h4 className='font-semibold text-white text-center'> {imageSousTitle1} </h4>
@@ -288,7 +154,9 @@ function WhatWeDo ({sousTitre2, titre1, titre2, image2}) {
 
     return (
         <div className='h-screen grid grid-cols-2 place-content-center px-24 gap-x-12'>
-            <div id='image1' className='bg-cover bg-center relative' style={{backgroundImage:`url(${image2})`, width: '70%', height: '100%'}}>
+            <div data-aos="zoom-in" 
+                    data-aos-offset="500"
+                    data-aos-duration="500"  className='bg-cover bg-center relative' style={{backgroundImage:`url(${image2})`, width: '70%', height: '100%'}}>
                     <div id='soubox1' className="absolute left-[90px] bottom-8 w-[500px] py-4 sm:py-8 bg-firstColor ">
                         <div className="px-6  lg:px-4 gap-8 ">
                             <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-2">
@@ -303,12 +171,12 @@ function WhatWeDo ({sousTitre2, titre1, titre2, image2}) {
                             </dl>
                         </div>
                     </div>
-            </div>
-            <div className='flex flex-col  gap-y-8'>
-                <h3 id='text1' className='text-[#64748b] text-[12px] uppercase'>{sousTitre2}</h3>
-                <h2 id='text2' className='text-5xl w-[700px] text-left   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
-                <p id='text3' className=''>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux </p>
-                <div id='box4' className='bottom-0 right-60 grid grid-cols-2 place-content-center place-items-center w-[600px] px-6 py-4 shadow-2xl  shadow-firstColor-500/40 gap-4'>
+                </div>
+            <div  className='flex flex-col  gap-y-8'>
+                <h3 data-aos="fade-up" className='text-[#64748b] text-[12px] uppercase'>{sousTitre2}</h3>
+                <h2 data-aos="fade-right" className='text-5xl w-[700px] text-left   capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
+                <p data-aos="fade-left"  className=''>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux </p>
+                <div data-aos="fade-up" className='bottom-0 right-60 grid grid-cols-2 place-content-center place-items-center w-[600px] px-6 py-4 shadow-2xl  shadow-firstColor-500/40 gap-4'>
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold ' style={{color:"#FF9900"}}/>Make key systems</div>
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold ' style={{color:"#FF9900"}}/>Make key systems</div>
                     <div className='font-semibold flex gap-4 text-[#111047]'><FaCheck className='font-bold ' style={{color:"#FF9900"}}/>Make key systems</div>
@@ -328,12 +196,15 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
     return(
         <div className='h-screen'>
             <div>
-                <div id='title1' className='py-8 flex flex-col justify-center items-center gap-y-8'>
+                <div data-aos="fade-up" id='title1' className='py-8 flex flex-col justify-center items-center gap-y-8'>
                     <h3 className='text-[#64748b] text-[12px] uppercase'>{sousTitre1}</h3>
                     <h2 className='text-5xl w-[700px] text-center capitalize'>{titre1}<span className='font-bold'>{titre2}</span></h2>
                 </div>
                 <div className='py-4 grid grid-cols-1 px-24 gap-4 md:grid-cols-2 lg:grid-cols-4 '>
-                    <div className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
+                    <div data-aos="fade-left-up" 
+                    data-aos-offset="500"
+                    data-aos-duration="500"               
+                    className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
                         <div className='p-4'>
                             <GiCalculator className='font-bold text-[150px] text-firstColor'/>
                         </div>
@@ -341,7 +212,11 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
                         <p>sod des esium od tempor </p>
                         <PiDotsThreeOutlineFill className=' font-bold text-secondColor/50 text-4xl'/>
                     </div>
-                    <div className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
+                    <div 
+                    data-aos="fade-left-up" 
+                    data-aos-offset="500"
+                    data-aos-duration="500"
+                    className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
                         <div className='p-4'>
                             <GiCalculator className='font-bold text-[150px] text-firstColor'/>
                         </div>
@@ -349,7 +224,11 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
                         <p>sod des esium od tempor </p>
                         <PiDotsThreeOutlineFill className=' font-bold text-secondColor/50 text-4xl'/>
                     </div>
-                    <div className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
+                    <div 
+                    data-aos="fade-left-up" 
+                    data-aos-offset="500"
+                    data-aos-duration="500"
+                    className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
                         <div className='p-4'>
                             <GiCalculator className='font-bold text-[150px] text-firstColor'/>
                         </div>
@@ -357,7 +236,11 @@ function PreniumServ({sousTitre1, titre1, titre2}) {
                         <p>sod des esium od tempor </p>
                         <PiDotsThreeOutlineFill className=' font-bold text-secondColor/50 text-4xl'/>
                     </div>
-                    <div className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
+                    <div 
+                     data-aos="fade-left-up" 
+                     data-aos-offset="500"
+                     data-aos-duration="500"
+                    className='bg-white shadow-2xl text-center flex flex-col items-center gap-y-2 py-4'>
                         <div className='p-4'>
                             <GiCalculator className='font-bold text-[150px] text-firstColor'/>
                         </div>
@@ -455,7 +338,10 @@ function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
             <div className='bannerHero'>
                 <div class="container mx-auto py-2 ">
                     <div class="-m-1 flex flex-wrap h-[1000px] md:-m-2">
-                        <div class="flex w-1/2 h-4/4 flex-wrap">
+                        <div  
+                        data-aos="zoom-in-left" 
+                        data-aos-offset="500"
+                        data-aos-duration="500" class="flex w-1/2 h-4/4 flex-wrap">
                             <div class=" w-full  h-full cursor-pointer relative overflow-hidden bg-cover2">
                                 <img  data-popover-target="popover-description" 
                                 alt="gallery"
@@ -472,7 +358,11 @@ function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
 
                             </div>
                         </div>
-                        <div class="flex w-1/2 flex-wrap">
+                        <div
+                        data-aos="zoom-in-right" 
+                        data-aos-offset="500"
+                        data-aos-duration="500" 
+                        class="flex w-1/2 flex-wrap">
                             <div data-popover-target="popover-default" class=" w-1/2 cursor-pointer relative overflow-hidden bg-cover">
                                 <img 
                                 alt="gallery"
@@ -536,7 +426,10 @@ function BannersFeat({titre1, text1, buttonText1, buttonText2, image3 }) {
                         </div>
                     </div>                          
                 </div>
-                <div id='bannerHero1' className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
+                <div
+                
+                    data-aos="fade-left" 
+                     className='h-[200px] px-[150px] flex justify-around items-center bg-[#FF9900]'>
                     <div className='w-[600px]'>
                         <h2 className='text-4xl  capitalize'>{titre1} <span className='font-bold'>{text1}</span></h2>
                     </div>
